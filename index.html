@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <h1 class="title">Calculadora Web</h1>
+
+  <div class="calculator">
+    <div class="top-bar">
+      <button id="show-history">🕒</button>
+      <button id="clear-entry">✖️</button>
+    </div>
+    <div class="display">
+      <div id="expression"></div>
+      <div id="result">0</div>
+    </div>
+    <div class="buttons">
+      <button class="gray" onclick="clearCalc()">C</button>
+      <button class="gray" onclick="appendValue('+/-')">+/-</button>
+      <button class="gray" onclick="appendValue('%')">%</button>
+      <button class="orange" onclick="appendValue('/')">÷</button>
+
+      <button onclick="appendValue('7')">7</button>
+      <button onclick="appendValue('8')">8</button>
+      <button onclick="appendValue('9')">9</button>
+      <button class="green" onclick="appendValue('*')">x</button>
+
+      <button onclick="appendValue('4')">4</button>
+      <button onclick="appendValue('5')">5</button>
+      <button onclick="appendValue('6')">6</button>
+      <button class="orange" onclick="appendValue('-')">-</button>
+
+      <button onclick="appendValue('1')">1</button>
+      <button onclick="appendValue('2')">2</button>
+      <button onclick="appendValue('3')">3</button>
+      <button class="orange" onclick="appendValue('+')">+</button>
+
+      <button onclick="appendValue('0')">0</button>
+      <button onclick="appendValue('.')">,</button>
+      <button class="orange equal-btn" onclick="calculate()">=</button>
+    </div>
+  </div>
+
+  <div id="history-panel" class="history-panel hidden">
+    <h3>Historial</h3>
+    <ul id="history-list"></ul>
+    <button onclick="clearHistory()" class="delete-history">Eliminar historial</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
